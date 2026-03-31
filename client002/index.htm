@@ -1,0 +1,275 @@
+<!DOCTYPE html><!-- update -->
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sandeep Ranawat | WordPress Expert</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #0b0f19;
+    color: #fff;
+}
+
+/* NAV */
+nav {
+    display: flex;
+    justify-content: center;
+    padding: 20px 40px;
+}
+nav h2 {
+    color: #22c55e;
+}
+
+/* HERO */
+.btn {
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+}
+
+.hero h1 {
+    font-size: 50px;
+    line-height: 1.2;
+}
+
+.hero span {
+    color: #22c55e;
+}
+
+.hero p {
+    color: #94a3b8;
+    margin-top: 15px;
+}.btn:hover {
+    background: #16a34a; /* dark green hover */
+    color: #fff;
+}
+
+
+.btn {
+    margin-top: 25px;
+    padding: 14px 28px;
+    background: #22c55e;
+    border-radius: 6px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+/* SECTION */
+section {
+    max-width: 1100px;
+    margin: auto;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+}
+
+/* CARDS */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.card {
+    background: #111827;
+    padding: 25px;
+    border-radius: 10px;
+    transition: 0.3s;
+    text-align: center;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+/* PROJECT BUTTON */
+.project-btn {
+    display: inline-block;
+    margin-top: 10px;
+    color: #22c55e;
+    text-decoration: none;
+}
+
+/* CTA */
+.cta {
+    text-align: center;
+    padding: 80px 20px;
+    background: #020617;
+}
+
+.cta h2 {
+    font-size: 32px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #94a3b8;
+}
+.contact-link {
+    color: #22c55e;
+    text-decoration: none;
+}
+
+.contact-link:hover {
+    color: #16a34a;
+}
+.project-img-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.overlay {
+    position: absolute;
+    top:0; left:0;
+    width:100%; height:100%;
+    background: rgba(0,0,0,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity:0;
+    transition: 0.3s;
+}
+
+.project-img-container:hover .overlay {
+    opacity:1;
+}
+
+.overlay .project-btn {
+    color:#fff;
+    font-weight:bold;
+    background: #22c55e;
+    padding: 10px 20px;
+    border-radius:5px;
+    text-decoration:none;
+}
+
+.overlay .project-btn:hover {
+    background:#16a34a;
+}
+
+</style>
+
+</head>
+
+<body>
+<script>
+const texts = ["High-Converting", "Responsive", "SEO-Friendly"];
+let count = 0;
+let index = 0;
+let currentText = "";
+let letter = "";
+
+(function type(){
+    if(count === texts.length) count = 0;
+    currentText = texts[count];
+    letter = currentText.slice(0, ++index);
+    document.getElementById("typed-text").textContent = letter;
+    if(letter.length === currentText.length){
+        count++;
+        index = 0;
+        setTimeout(type, 1000); // pause before next word
+    } else {
+        setTimeout(type, 150);
+    }
+})();
+</script>
+
+<nav>
+    <h2>Sandeep.</h2>
+</nav>
+
+<div class="hero">
+    <h1>I Build <span id="typed-text"></span> <br>WordPress Websites</h1>
+    <p>Fast, responsive & optimized for business growth</p>
+    <a href="#contact" class="btn">Get in Touch</a>
+</div>
+
+<section>
+    <h2>About Me</h2>
+    <p>
+    I'm a WordPress & WooCommerce developer focused on creating modern, fast-loading and conversion-focused websites using Elementor.  
+    I help businesses establish a strong online presence with clean UI and optimized performance.
+    </p>
+</section>
+
+<section>
+    <h2>What I Do</h2>
+    <div class="grid">
+        <div class="card">WordPress Website Development</div>
+        <div class="card">WooCommerce Store Setup</div>
+        <div class="card">Elementor Landing Pages</div>
+        <div class="card">Speed Optimization</div>
+    </div>
+</section>
+
+
+<section>
+    <h2>Projects</h2>
+    <div class="grid">
+
+        <!-- Business Website -->
+        <div class="card">
+            <div class="project-img-container">
+                <img src="https://i.postimg.cc/ZRTZ6pt0/c5feceb193212691b6dbd86b2fc9aaef.webp" style="width:100%; border-radius:8px; display:block;">
+                <div class="overlay">
+                    <a href="#" class="project-btn">View Project</a>
+                </div>
+            </div>
+            <h3>Business Website</h3>
+            <p>Clean corporate website design</p>
+        </div>
+
+        <!-- Ecommerce Store -->
+        <div class="card">
+            <div class="project-img-container">
+                <img src="https://i.postimg.cc/gJS9R7KX/378e2104591fff8061b5ccbc7bf33bea.webp" style="width:100%; border-radius:8px; display:block;">
+                <div class="overlay">
+                    <a href="#" class="project-btn">View Project</a>
+                </div>
+            </div>
+            <h3>Ecommerce Store</h3>
+            <p>WooCommerce store with checkout</p>
+        </div>
+
+        <!-- Landing Page -->
+        <div class="card">
+            <div class="project-img-container">
+                <img src="https://i.postimg.cc/XYbVnTHL/original-17521e86823d09eec75a072b7cacd1cd.webp" style="width:100%; border-radius:8px; display:block;">
+                <div class="overlay">
+                    <a href="#" class="project-btn">View Project</a>
+                </div>
+            </div>
+            <h3>Landing Page</h3>
+            <p>High-converting landing page</p>
+        </div>
+
+    </div>
+</section>
+
+
+<footer>
+<p>ðŸ”— <a href="https://linkedin.com/in/sandeepranawat" class="contact-link">LinkedIn</a></p>
+<p>ðŸ’¬ <a href="https://wa.me/919630621358" class="contact-link">WhatsApp</a></p>
+    <p>Â© 2026 Sandeep Ranawat</p>
+</footer>
+
+</body>
+</html>
